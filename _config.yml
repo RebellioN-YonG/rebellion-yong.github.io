@@ -1,0 +1,13 @@
+title: Rebel's Blog
+description: 用 Markdown 记录想法、学习与生活
+lang: zh-CN
+timezone: Asia/Shanghai
+markdown: kramdown
+permalink: /:year/:month/:day/:title/
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
