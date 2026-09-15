@@ -13,6 +13,9 @@ social:
   name: RebellioN-YonG
   links:
     - https://github.com/RebellioN-YonG
+plugins:
+  - jekyll-paginate
+
 paginate: 10
 paginate_path: /page/:num/
 toc: true
