@@ -1,13 +1,34 @@
-title: Rebel's Blog
-description: 用 Markdown 记录想法、学习与生活
+# Chirpy site configuration
+theme: jekyll-theme-chirpy
 lang: zh-CN
 timezone: Asia/Shanghai
-markdown: kramdown
-permalink: /:year/:month/:day/:title/
-
+title: Rebel's Blog
+tagline: 用 Markdown 记录想法、学习与生活
+description: 专注内容的个人博客
+url: "https://rebellion-yong.github.io"
+baseurl: ""
+github:
+  username: RebellioN-YonG
+social:
+  name: RebellioN-YonG
+  links:
+    - https://github.com/RebellioN-YonG
+paginate: 10
+paginate_path: /page/:num/
+toc: true
+theme_mode:
 defaults:
   - scope:
       path: ""
       type: posts
     values:
       layout: post
+      comments: false
+      toc: true
+      permalink: /posts/:title/
+exclude:
+  - work
+  - outputs
+  - README.md
+  - LICENSE
+  - publish.sh
