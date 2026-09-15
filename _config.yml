@@ -15,6 +15,7 @@ social:
     - https://github.com/RebellioN-YonG
 plugins:
   - jekyll-paginate
+  - jekyll-archives
 
 paginate: 10
 paginate_path: /page/:num/
@@ -35,3 +36,12 @@ exclude:
   - README.md
   - LICENSE
   - publish.sh
+
+jekyll-archives:
+  enabled: [categories, tags]
+  layouts:
+    category: category
+    tag: tag
+  permalinks:
+    category: /categories/:name/
+    tag: /tags/:name/
