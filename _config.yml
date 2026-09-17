@@ -30,6 +30,7 @@ defaults:
       comments: false
       toc: true
       permalink: /posts/:title/
+      mermaid: true
 exclude:
   - work
   - outputs
