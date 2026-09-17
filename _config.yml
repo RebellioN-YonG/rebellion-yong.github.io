@@ -17,6 +17,32 @@ plugins:
   - jekyll-paginate
   - jekyll-archives
 
+# Markdown / 语法高亮
+# 注意：block.line_numbers 必须为 true。Chirpy 的 refactor-content.html 会主动剥掉
+# <pre class="highlight">，只有开启行号后 Rouge 才会输出 <table class="rouge-table">，
+# 其中的 <pre> 才能被 compress 布局的 <pre> 保护逻辑识别；否则代码块内的换行会被
+# 压缩成空格，整段代码挤成一行。
+kramdown:
+  footnote_backlink: "&#8617;&#xfe0e;"
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: highlight
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1
+
+# HTML 压缩（主题 _layouts/default.html 使用 layout: compress）
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  profile: false
+  blanklines: false
+  ignore:
+    envs: [development]
+
 paginate: 10
 paginate_path: /page/:num/
 toc: true

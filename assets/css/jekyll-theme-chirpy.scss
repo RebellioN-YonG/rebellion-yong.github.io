@@ -12,13 +12,15 @@
 {%- endif -%}
 ';
 
-/* 自定义：代码块自动换行 (Word Wrap) */
-.highlight code,
-.highlight pre,
-div[class^='language-'] .highlight code,
-div[class^='language-'] pre,
-td.rouge-code pre {
-  white-space: pre-wrap !important;
-  word-break: break-word;
-  overflow-wrap: anywhere;
+/*
+ * 自定义：自定义锚点跳转时避开固定顶栏。
+ * Chirpy 的 scroll-margin-top 只作用于 h1~h5，手写的 <a id="xxx"></a> 不在其列，
+ * 移动端跳转时目标顶部会被约 3.5rem 高的固定顶栏遮住。
+ */
+.content a[id] {
+  scroll-margin-top: 3.5rem;
+
+  @media all and (min-width: 1200px) {
+    scroll-margin-top: 2rem;
+  }
 }
