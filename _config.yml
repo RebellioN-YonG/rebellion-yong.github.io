@@ -9,6 +9,11 @@ url: "https://rebellion-yong.github.io"
 baseurl: ""
 github:
   username: RebellioN-YonG
+# 侧边栏头像：直接引用 GitHub 头像地址（外部 URL 会原样输出，不拼 baseurl）。
+# 改了 GitHub 头像后，这里无需任何改动即可自动同步。
+# 若某天想改为站内托管，把下面一行换成 /assets/images/avatar.png，
+# 并执行 curl -L -o assets/images/avatar.png "https://github.com/RebellioN-YonG.png?size=224"
+avatar: "https://github.com/RebellioN-YonG.png?size=224"
 social:
   name: RebellioN-YonG
   links:
